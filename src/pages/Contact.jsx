@@ -10,8 +10,8 @@ export default function Contact() {
             <p className="text-2xl md:text-4xl font-medium leading-relaxed mb-12">
               Ready to start a new project? Let's talk about it.
             </p>
-            <a href="mailto:hello@sajilostudio.com" className="text-xl md:text-2xl font-bold uppercase tracking-wide border-b-2 border-black pb-2 hover:opacity-50 transition-opacity">
-              hello@sajilostudio.com
+            <a href="mailto:hello@sajiloculture.com" className="text-xl md:text-2xl font-bold uppercase tracking-wide border-b-2 border-black pb-2 hover:opacity-50 transition-opacity">
+              hello@sajiloculture.com
             </a>
           </div>
           <div className="flex flex-col space-y-8">

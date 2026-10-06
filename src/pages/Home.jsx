@@ -2,6 +2,7 @@ import { useRef, useEffect } from 'react';
 import { motion, useScroll, useTransform, useInView } from 'framer-motion';
 
 import { ArrowRight } from 'lucide-react';
+import Logo from '../components/Logo';
 
 // Reusable animated text component
 const RevealText = ({ children, delay = 0, className = '' }) => {
@@ -78,7 +79,7 @@ export default function Home() {
           <div className="grid grid-cols-1 md:grid-cols-12 gap-8">
             <div className="md:col-start-7 md:col-span-5 text-xl md:text-2xl font-medium leading-relaxed max-w-lg">
               <RevealText delay={0.4}>
-                Sajilo Studio is an independent creative studio building brands, digital experiences, and technology that people remember.
+                SAJILO CULTURE is an independent creative studio building brands, digital experiences, and technology that people remember.
               </RevealText>
             </div>
           </div>
@@ -206,7 +207,7 @@ export default function Home() {
       <section className="py-24 md:py-40 px-6 md:px-12 bg-white">
         <div className="max-w-screen-2xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-32">
           <div>
-            <h2 className="text-3xl md:text-5xl font-bold uppercase tracking-tighter mb-12">Sajilo Studio</h2>
+            <h2 className="text-3xl md:text-5xl font-bold uppercase tracking-tighter mb-12">SAJILO CULTURE</h2>
             <div className="text-2xl md:text-4xl font-medium leading-snug">
               We are a creative digital studio working across design, technology, branding, and digital experiences. We turn complex ideas into clear, distinctive, and memorable experiences.
             </div>

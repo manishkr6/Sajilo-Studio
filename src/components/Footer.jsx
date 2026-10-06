@@ -1,4 +1,4 @@
-
+import Logo from './Logo';
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -10,15 +10,15 @@ const Footer = () => {
         {/* Brand & Description */}
         <div className="lg:col-span-2 flex flex-col justify-between">
           <div>
-            <a href="#home" className="text-2xl md:text-3xl font-bold tracking-tight uppercase block mb-6 hover:text-gray-300 transition-colors">
-              Sajilo Studio
+            <a href="#home" className="block mb-6 hover:text-gray-300 transition-colors inline-block">
+              <Logo />
             </a>
             <p className="text-gray-400 text-lg md:text-xl max-w-md text-balance leading-relaxed">
               Creative studio for brands, digital experiences, and technology.
             </p>
           </div>
           <div className="mt-16 md:mt-0 text-gray-500 text-sm hidden lg:block">
-            &copy; {currentYear} Sajilo Studio. All rights reserved.
+            &copy; {currentYear} SAJILO CULTURE. All rights reserved.
           </div>
         </div>
         
@@ -62,7 +62,7 @@ const Footer = () => {
       
       {/* Mobile Copyright */}
       <div className="mt-16 text-gray-500 text-sm lg:hidden border-t border-gray-800 pt-8">
-        &copy; {currentYear} Sajilo Studio. All rights reserved.
+        &copy; {currentYear} SAJILO CULTURE. All rights reserved.
       </div>
     </footer>
   );

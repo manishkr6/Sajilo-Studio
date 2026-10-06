@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
+import Logo from './Logo';
 
 const Navbar = () => {
   const [scrolled, setScrolled] = useState(false);
@@ -30,9 +31,9 @@ const Navbar = () => {
         <div className="max-w-screen-2xl mx-auto flex items-center justify-between">
           <a 
             href="#home" 
-            className="text-xl md:text-2xl font-bold tracking-tight uppercase hover:opacity-70 transition-opacity z-50 relative"
+            className="text-xl md:text-2xl font-bold tracking-tight uppercase hover:opacity-70 transition-opacity z-50 relative flex items-center"
           >
-            Sajilo Studio
+            <Logo />
           </a>
 
           {/* Desktop Nav */}
