@@ -1,11 +1,9 @@
 import { useState, useEffect } from 'react';
-import { Link, useLocation } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
 
 const Navbar = () => {
   const [scrolled, setScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-  const location = useLocation();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -15,16 +13,11 @@ const Navbar = () => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  // Close mobile menu on route change
-  useEffect(() => {
-    setMobileMenuOpen(false);
-  }, [location]);
-
   const navLinks = [
-    { name: 'Work', path: '/work' },
-    { name: 'Studio', path: '/studio' },
-    { name: 'Services', path: '/services' },
-    { name: 'Contact', path: '/contact' },
+    { name: 'Work', path: '#work' },
+    { name: 'Studio', path: '#studio' },
+    { name: 'Services', path: '#services' },
+    { name: 'Contact', path: '#contact' },
   ];
 
   return (
@@ -35,24 +28,24 @@ const Navbar = () => {
         }`}
       >
         <div className="max-w-screen-2xl mx-auto flex items-center justify-between">
-          <Link 
-            to="/" 
+          <a 
+            href="#home" 
             className="text-xl md:text-2xl font-bold tracking-tight uppercase hover:opacity-70 transition-opacity z-50 relative"
           >
             Sajilo Studio
-          </Link>
+          </a>
 
           {/* Desktop Nav */}
           <nav className="hidden md:flex items-center space-x-12">
             {navLinks.map((link) => (
-              <Link
+              <a
                 key={link.name}
-                to={link.path}
+                href={link.path}
                 className="text-sm uppercase tracking-wide font-medium relative group"
               >
                 {link.name}
                 <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-black transition-all duration-300 ease-out group-hover:w-full"></span>
-              </Link>
+              </a>
             ))}
           </nav>
 
@@ -88,12 +81,13 @@ const Navbar = () => {
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ delay: 0.2 + (i * 0.1), duration: 0.5 }}
                 >
-                  <Link
-                    to={link.path}
+                  <a
+                    href={link.path}
+                    onClick={() => setMobileMenuOpen(false)}
                     className="text-4xl font-bold uppercase tracking-tighter"
                   >
                     {link.name}
-                  </Link>
+                  </a>
                 </motion.div>
               ))}
             </nav>

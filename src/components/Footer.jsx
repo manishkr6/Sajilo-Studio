@@ -1,4 +1,4 @@
-import { Link } from 'react-router-dom';
+
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -10,9 +10,9 @@ const Footer = () => {
         {/* Brand & Description */}
         <div className="lg:col-span-2 flex flex-col justify-between">
           <div>
-            <Link to="/" className="text-2xl md:text-3xl font-bold tracking-tight uppercase block mb-6 hover:text-gray-300 transition-colors">
+            <a href="#home" className="text-2xl md:text-3xl font-bold tracking-tight uppercase block mb-6 hover:text-gray-300 transition-colors">
               Sajilo Studio
-            </Link>
+            </a>
             <p className="text-gray-400 text-lg md:text-xl max-w-md text-balance leading-relaxed">
               Creative studio for brands, digital experiences, and technology.
             </p>
@@ -28,13 +28,13 @@ const Footer = () => {
           <ul className="space-y-4">
             {['Work', 'Studio', 'Services', 'Contact'].map((item) => (
               <li key={item}>
-                <Link 
-                  to={`/${item.toLowerCase()}`} 
+                <a 
+                  href={`#${item.toLowerCase()}`} 
                   className="text-lg hover:text-[#ff4500] transition-colors relative inline-block group"
                 >
                   {item}
                   <span className="absolute -bottom-1 left-0 w-0 h-[1px] bg-[#ff4500] transition-all duration-300 ease-out group-hover:w-full"></span>
-                </Link>
+                </a>
               </li>
             ))}
           </ul>

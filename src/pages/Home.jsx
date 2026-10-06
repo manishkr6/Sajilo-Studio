@@ -1,6 +1,6 @@
 import { useRef, useEffect } from 'react';
 import { motion, useScroll, useTransform, useInView } from 'framer-motion';
-import { Link } from 'react-router-dom';
+
 import { ArrowRight } from 'lucide-react';
 
 // Reusable animated text component
@@ -93,16 +93,16 @@ export default function Home() {
         <div className="max-w-screen-2xl mx-auto">
           <div className="flex justify-between items-end mb-16 md:mb-24">
             <h2 className="text-4xl md:text-6xl font-bold tracking-tighter uppercase">Selected Work</h2>
-            <Link to="/work" className="hidden md:flex items-center text-lg font-medium hover:text-[#ff4500] transition-colors group">
+            <a href="#work" className="hidden md:flex items-center text-lg font-medium hover:text-[#ff4500] transition-colors group">
               View all projects 
               <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
-            </Link>
+            </a>
           </div>
 
           <div className="space-y-32 md:space-y-48">
             {projects.map((project, idx) => (
               <div key={project.id} className="group relative">
-                <Link to={`/work/${project.slug}`} data-cursor="VIEW">
+                <a href="#work" data-cursor="VIEW">
                   <div className={`grid grid-cols-1 ${idx % 2 !== 0 ? 'md:grid-cols-12' : 'md:grid-cols-12'} gap-8 md:gap-16`}>
                     
                     {/* Image Block */}
@@ -131,7 +131,7 @@ export default function Home() {
                     </div>
 
                   </div>
-                </Link>
+                </a>
               </div>
             ))}
           </div>
@@ -226,10 +226,10 @@ export default function Home() {
               </div>
             </div>
             <div className="mt-16 pt-8 border-t border-black/10">
-              <Link to="/studio" className="inline-flex items-center text-lg font-medium hover:text-[#ff4500] transition-colors group">
+              <a href="#studio" className="inline-flex items-center text-lg font-medium hover:text-[#ff4500] transition-colors group">
                 About the studio
                 <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
-              </Link>
+              </a>
             </div>
           </div>
         </div>
@@ -292,13 +292,13 @@ export default function Home() {
           <p className="text-xl md:text-2xl text-gray-400 mb-16 max-w-2xl mx-auto">
             Let's turn your idea into something simple, distinctive, and unforgettable.
           </p>
-          <Link 
-            to="/contact" 
+          <a 
+            href="#contact" 
             className="inline-flex items-center bg-white text-black px-8 py-5 rounded-full text-lg md:text-xl font-bold uppercase tracking-wide hover:bg-[#ff4500] hover:text-white transition-colors duration-300"
           >
             Start a project
             <ArrowRight className="ml-3 w-6 h-6" />
-          </Link>
+          </a>
         </div>
       </section>
 
